@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/png" href="/assets/img/logocropped.png" />
+
+    </head>
+</head>
+    <body>
+    <div id="site-header">
+        <header>
+            <div class="row">
+                <a class="row" title="Piquashu" href="/">
+                <img class="logo" src="/assets/img/logo.png" alt="Piquashu">
+
+                <p id="title">PiquaShu!</p>
+                </a>
+            </div>
+            <div class="row">
+                <nav id="navbar">
+                    <a class="" href="/">Accueil</a>
+                    <a class="" href="/pathologies">Symptômes et pathologies</a>
+                    <a class="" href="/contact">A propos</a>
+                    <a class="" href="/login">{{firstname ?? 'Se connecter'}}</a>
+                </nav>
+                <form id="search" class="search" method="get" action="/pathologies">
+                    <label class="text-label" for="text"></label>
+                    <input id="text" name="symptome" type="text" class="inputSymptome" placeholder="Rechercher un symptôme...">
+                    <button class="search-icon" alt="Loupe" type="submit"></button>
+                </form>
+                
+            </div>
+
+        </header>
+    </div>
+    {% block body %}{% endblock %}
+        <script>
+            target = document.getElementById("search");
+            firstname = "{{firstname}}"
+            if (!firstname) {target.style.display = "none"}
+            else {target.style.display = ""};
+
+        </script>
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>

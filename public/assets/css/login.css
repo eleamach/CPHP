@@ -1,0 +1,35 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .login-label {
+    text-align: left;
+    margin-bottom: 5px;
+    }
+    
+    .login-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    }
+    
+    .loggin-button {
+    padding: 10px;
+    background-color: #6e9a26;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    .switch {
+    margin-top: 15px;
+    font-size: 14px;
+    }
+    
+    .switch a {
+    color: #6e9a26;
+    text-decoration: none;
+    }

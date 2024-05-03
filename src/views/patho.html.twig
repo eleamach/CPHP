@@ -1,0 +1,60 @@
+{# Template général de la page #}
+{% extends 'base.html.twig' %}
+
+{# Titre de la page #}
+{% block title %}Pikashu{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/patho.css">    
+    <script>"patho.js"</script>
+{% endblock %}
+
+{# Ici vous mettez vos codes HTML et balises Twig au besoin #}
+{% block body %}
+<main>
+        <h2>Sympto et pathologie</h2>
+        <div id="filtre">
+            <form method="GET" id="form1"> 
+                <select name="meridien" class="meridien">
+                    <option value="">Sélectionnez un méridien</option>
+                    {% for item in datamerid %}
+                        <option>{{ item }}</option>
+                    {% endfor %}
+                </select>
+                <select name="cara" class="Caractéristiques">
+                    <option ng-repeat="filter:query" value="">Sélectionnez une caractéristique</option>
+                    {% for item in datacara %}
+                        <option>{{ item }}</option>
+                    {% endfor %}
+                </select>
+                <select name="type" class="Type de pathologie">
+                    <option value="">Sélectionnez une pathologie</option>
+                    {% for item in datapatho %}
+                        <option>{{ item }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit"  value="Envoyer" form="form1" >
+            </form>
+        </div>
+        <table id="tabPatho">
+            <tr>
+                <th>Catégorie de pathologie</th>
+                <th>Caractéristiques possibles</th>
+                <th>Exemple</th>
+            </tr>
+            {% for item in data %}
+            <tr>
+                <td>{{item.meridien}}</td>
+                <td>{% for type in item.caracteristique %} {{type}} {% endfor %}</td>
+                <td>{{item.descpatho}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="script.js"></script>
+{% endblock %}
+

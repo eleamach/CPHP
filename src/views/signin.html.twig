@@ -1,0 +1,57 @@
+{# Template général de la page #}
+{% extends 'base.html.twig' %}
+
+{# Titre de la page #}
+{% block title %}Pikashu{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+{% endblock %}
+
+{# Ici vous mettez vos codes HTML et balises Twig au besoin #}
+{% block body %}
+<main>
+        <div class="row gap-5 mt-50">
+            <div class="column max-width-50">
+                <div class="card">
+                    <h2 class="mb-20">Inscription</h2>
+                    <p class="switch" id="empty">  <p>
+                    <form class="login-form" method="post" action="/register">
+                        <label class="login-label" for="lastname"></label>
+                        <input name="lastname" type="text" id="lastname" class="login-input" placeholder="Votre nom">
+                        <label class="login-label" for="firstname"></label>
+                        <input name="firstname" type="text" id="firstname" class="login-input" placeholder="Votre prénom">
+
+                        <label class="login-label" for="Email"></label>
+                        <input name="email" type="email" id="email" class="login-input" placeholder="Votre email">
+                  
+                        <label class="login-label" for="password"></label>
+                        <input name="password" type="password" id="password" class="login-input" placeholder="Votre mot de passe">
+                        <button class="loggin-button" type="submit">S'inscrire</button>
+                    </form>
+                    <div class="switch column">
+                        
+                        <p>Vous avez déjà un compte ? </p>
+                        <a href="/login">Se connecter ici</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column max-width-50">
+                <img src="/assets/img/Acuponcture_traditionel_chinoise-removebg-preview.png" alt="Pikashu">
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.has('empty')){
+    document.getElementById("empty").innerHTML = "Veuillez remplir tous les champs !";
+    console.log("hello");
+    }
+    </script>
+{% endblock %}

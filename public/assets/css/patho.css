@@ -1,0 +1,24 @@
+#filtre {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+}
+
+select {
+    height: 30px;
+    width: 200px;
+}
+
+#tabPatho {
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#tabPatho tr {
+    background-color: #D9D9D9;
+    height: 50px;
+    border-top: 0.5em solid #FFFFFF;
+}

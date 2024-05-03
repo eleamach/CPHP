@@ -1,0 +1,36 @@
+{# Template général de la page #}
+{% extends 'base.html.twig' %}
+
+{# Titre de la page #}
+{% block title %}Pikashu{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/style.css">
+{% endblock %}
+
+{# Ici vous mettez vos codes HTML et balises Twig au besoin #}
+{% block body %}
+<main class="center">
+    <div class="column max-width-50">
+        <img src="/assets/img/Acuponcture_traditionel_chinoise-removebg-preview.png" alt="Piquashu">
+    </div>
+    <div class="mt-50">
+        <p>Bienvenue sur le site de l'Association d'Acupuncture Traditionnelle Chinoise.</p>
+        <p>Découvrez l'art de la guérison millénaire de la médecine traditionnelle chinoise (MTC).</p>
+        <p>Nous sommes dédiés à promouvoir la santé et le bien-être à travers l'acupuncture.</p>
+    </div>
+    <div class="mt-50">
+        <h3>Ce que nous faisons :</h3>
+        <p>Acupuncture Expert : Nos praticiens certifiés offrent des soins de qualité pour une variété de problèmes de santé.</p>
+        <p>Éducation : Explorez la MTC et apprenez comment elle peut améliorer votre vie. </p>
+    </div>
+    <div class="mt-50">
+        <p>Rejoignez-nous dans notre quête de santé et de bien-être.</p>
+        <p>Bienvenue chez l'Association d'Acupuncture Traditionnelle Chinoise.</p>
+    </div>
+</main>
+{% endblock %}
+
+{% block javascripts %}
+<script src="script.js"></script>
+{% endblock %}

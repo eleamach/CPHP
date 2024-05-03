@@ -1,0 +1,26 @@
+{# Template général de la page #}
+{% extends 'base.html.twig' %}
+
+{# Titre de la page #}
+{% block title %}Pikashu{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/style.css">
+{% endblock %}
+
+{# Ici vous mettez vos codes HTML et balises Twig au besoin #}
+{% block body %}
+<main class="center">
+    <div class="column max-width-50">
+        <img class="errorPages" src="/assets/img/error404.png" alt="Piquashu">
+    </div>
+    <div class="mt-50">
+        <p>Page non trouvée...</p>
+        <p>Vérifier votre url !</p>
+    </div>
+</main>
+{% endblock %}
+
+{% block javascripts %}
+<script src="script.js"></script>
+{% endblock %}

@@ -1,0 +1,56 @@
+{# Template général de la page #}
+{% extends 'base.html.twig' %}
+
+{# Titre de la page #}
+{% block title %}Pikashu{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+{% endblock %}
+
+{# Ici vous mettez vos codes HTML et balises Twig au besoin #}
+{% block body %}
+<main>
+        <div class="row gap-5 mt-50">
+        <div class="card" class="login-form" class="column max-width-50">
+            <h2 class="user">Bonjour {{ username ?? 'firstname' }}</h2>
+            <button class="loggin-button" onclick='window.location.href="/disconnect";' >Se déconnecter</button>
+        </div>
+            <div class="column max-width-50">
+                <img src="/assets/img/Acuponcture_traditionel_chinoise-removebg-preview.png" alt="Pikashu">
+            </div>
+            <div class="column max-width-50">
+                <div class="card">
+                    <h2 class="mb-20">Changer de mot de passe</h2>
+                    <p id="match"></p>
+                    <form class="login-form" method="post" action="/change-password">
+                        <label class="login-label" for="old"></label>
+                        <input name="oldpassword" type="password" id="oldpassword" class="login-input" placeholder="Mot de passe actuel">
+
+                        <label class="login-label" for="Email"></label>
+                        <input name="password" type="password" id="password" class="login-input" placeholder="Nouveau mot de passe">
+                  
+                        <label class="login-label" for="password"></label>
+                        <input name="confirm" type="password" id="confirm" class="login-input" placeholder="Confirmer votre nouveau mot de passe">
+                  
+                        <button class="loggin-button" type="submit">Appliquer</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.has('match')){
+    document.getElementById("match").innerHTML = "Les mots de passes ne correspondent pas !";
+    }
+    </script>
+
+{% endblock %}

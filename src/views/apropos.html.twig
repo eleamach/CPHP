@@ -1,0 +1,32 @@
+{# Template général de la page #}
+{% extends 'base.html.twig' %}
+
+{# Titre de la page #}
+{% block title %}Pikashu{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/style.css">
+{% endblock %}
+
+{# Ici vous mettez vos codes HTML et balises Twig au besoin #}
+{% block body %}
+    <main class="center">
+        <h1>A propos</h1>
+        <div class="mt-50">
+            <h3>Bienvenue sur le site web PiquaShu.</h3>
+        </div>
+        <div class="mt-50">
+            <p>C'est un projet réalisé par quatre étudiants en 4ème année de la filière IRC de CPE Lyon.</p> 
+            <p>Ce site à été créé dans le cadre du module "Techniques de l’Internet Dynamique et Architecture Logicielle".</p>
+            <p>Explorez notre site pour en savoir plus sur l'acuponcture, les symptomes et pathologies associées ainsi que des exemples.</p>
+            <p>Vous retrouverez aussi une page de connexion à votre compte pour effectuer des recherches par symptôme</p>
+        </div>
+        <div class="mt-50">
+            <img src="/assets/img/cpe.png" alt="CPE Lyon" >
+        </div>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="script.js"></script>
+{% endblock %}

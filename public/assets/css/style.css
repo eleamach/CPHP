@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    background-color: rgb(254, 255, 247);
+}
+
+header {
+    max-width: 1200px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+main {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em ;
+    margin-bottom: 2em ;
+    max-width: 75%;
+}
+
+.logo {
+    max-width: 75px;
+    height: auto;
+}
+
+a {
+    color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#site-header {
+    background-color: #6e9a26;
+}
+
+#logo {
+    align-self: flex-start;
+}
+
+#navbar {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.search {
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ffffff; 
+    padding-right: 40px; 
+    color: #000000;
+}
+
+.search-icon {
+    width: 20px; 
+    height: 20px; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    position: absolute;
+    right: 5px; 
+    cursor: pointer;
+}
+
+#title {
+    font-size: 1.7em;
+}
+
+.gap-5 {
+    gap: 5em;
+}
+
+.debug {
+    background-color: red;
+}
+
+.max-width-50 {
+    max-width: 50%;
+}
+
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.center {
+    text-align: center;
+}
+
+.user{
+    font-size: large;
+    text-align: center
+}
+
+.errorPages {
+    max-height: 500px;
+}
